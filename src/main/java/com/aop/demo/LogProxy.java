@@ -12,9 +12,9 @@ public class LogProxy implements InvocationHandler {
     }
 
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println(method.getName() + "is start,params is " + Arrays.toString(args));
+        System.out.println(method.getName() + " is start,params is " + Arrays.toString(args));
         Object returnValue = method.invoke(delegate,args);
-        System.out.println(method.getName() + "is finised");
+        System.out.println(method.getName() + " is finised");
         return returnValue;
     }
 }
